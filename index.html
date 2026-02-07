@@ -14,15 +14,17 @@
     }
 
     body {
-      height: 100vh;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* SAME background */
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-    }
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px 0;
+}
 
     .container {
       position: relative;
@@ -102,7 +104,12 @@
       cursor: pointer;
       z-index: 3;
       box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    }
+    
+      @media (max-height: 700px) {
+  .container {
+    transform: scale(0.92);
+  }
+}
   </style>
 </head>
 
